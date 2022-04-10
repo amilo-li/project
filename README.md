@@ -9,7 +9,7 @@
 Viele Firmen empfangen täglich Besucher. Seien es Privatkunden oder externe Firmen.
 Es ist Vorschrift, als Unternehmen ausweisen zu können, welche Personen sich 
 an welchem Tag und zu welcher Zeit in welchem Gebäude aufgehalten haben. Dies wird besonders
-bei einem Notfall (z.B. Brand) relevant.  
+bei einem Notfall (z.B. Brand) relevant.
 
 ## Funktion und Projektidee
 Auf der Startseite kann eine neue Besucheranmeldung erfasst werden.
