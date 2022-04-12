@@ -1,4 +1,4 @@
-# Besucher- und Essensanmeldung
+# Investitionsprojekte
 ## Inhalt
 1. [Ausgangslage des Projektes](#ausgangslage-des-projektes)
 2. [Funktion und Projektidee](#funktion-und-projektidee)
