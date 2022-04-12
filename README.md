@@ -1,30 +1,50 @@
-# Besucheranmeldung
+# Besucher- und Essensanmeldung
 ## Inhalt
 1. [Ausgangslage des Projektes](#ausgangslage-des-projektes)
 2. [Funktion und Projektidee](#funktion-und-projektidee)
 3. [Ablaufdiagramm](#ablaufdiagramm)
+4. [Ungelöste/unbearbeitete Probleme](#ungelsteunbearbeitete-probleme)
 
 
 ## Ausgangslage des Projektes
-Viele Firmen empfangen täglich Besucher. Seien es Privatkunden oder externe Firmen.
-Es ist Vorschrift, als Unternehmen ausweisen zu können, welche Personen sich 
-an welchem Tag und zu welcher Zeit in welchem Gebäude aufgehalten haben. Dies wird besonders
-bei einem Notfall (z.B. Brand) relevant.
+Als Unternehmen ist es essenziell einen Überblick über geplante und laufende Investitionen 
+zu erhalten. Dabei sind Informationen wie Projektbeschreibung, interne und externe Kosten, priorität und
+weitere relevant. Dies dient als Grundlage für die Entscheidung durch die Geschäftsleitung, ob das Projekt
+umgesetzt werden soll. Weiter soll eine Übersicht der Projekte realisiert werden.
+Dies dient als Basis für Budget Auswertung und Planung.
 
 ## Funktion und Projektidee
-Auf der Startseite kann eine neue Besucheranmeldung erfasst werden.
-Ein Formular öffnet sich mit Feldern wie Vorname / Name des Erfassers, Firma, Anzahl Besucher, Termin Beginn, Termin Ende
-und Standort / Gebäude.
-Optional kann eine Essensanmeldung getätigt werden. Dabei werden zusätzlich die internen Mitarbeiter angegeben sowie Angaben zu 
-spezial Menus (z.B. Ohne Schweinefleisch, Laktose Intoleranz).
+***Dateneingabe 1 - interner Mitarbeiter***
 
-Das Formular wird ausschliesslich von internen Mitarbeitern verwendet und funktioniert ohne Log-in.
-Es wird davon ausgegangen, dass der Erfasser seinen richtigen Namen einträgt. 
+Auf der Startseite kann ein neues Investitionsprojekt erfasst werden.
+Ein Formular öffnet sich mit Feldern wie Vorname / Name des Erfassers, Geschäftsfeld / Bereich, Titel des Projektes, 
+Priorität, Anfangs und Endtermin, Total externe Kosten, Interne Kosten für die Abteilung
+Informatik, Labor, Marketing (Eingabe von Stunden).
 
-Die Auswertung umfasst die Anzahl der Besucher in einem Zeitraum, welche Besucher sich an welchem Tag in welchem Gebäude
-aufgehalten haben, sowie die berechneten Kosten bei einem Besuch mit Essen. 
+***Datenverarbeitung***
+
+Folgende Werte werden berechnet:
+- Total Investitionssumme
+- Total interne Kosten pro Abteilung (Stundensatz multipliziert mit den Stunden)
+
+***Dateneingabe 2 - Geschäftsleitung***
+
+Die Geschäftsleitung kann die Investitionsprojekte freigeben (Ja/Nein).
+Wird der Antrag freigegeben wechselt der Status auf "Genehmigt", wird 
+der Antrag abgelehnt wechselt der Status auf "Abgelehnt" und die Geschäftsleitung muss
+eine Begründung eintragen. 
+In jedem fall erhält anschliessend der Antragsteller eine Benachrichtigung. 
+
+***Auswertung***
+
+Die Auswertung umfasst:
+- Die Übersicht aller laufenden Investitionsprojekte 
+- Die Übersicht der laufenden Investitionsprojekte pro Geschäftsfeld / Bereich 
+- Gegenüberstellung der total Investitionssumme pro Bereich der abgeschlossenen Projekte vs. der laufenden und geplanten (relevant für Budgetplanung).
 
 ## Ablaufdiagramm
 
-## Anleitung und Walkthrough
 
+##Ungelöste/unbearbeitete Probleme
+- Investitionsprojekte für die Währung Euro.
+- Weitere Aufgaben an die Buchhaltung / Controlling / Facility Management usw. 
