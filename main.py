@@ -9,9 +9,14 @@ def start():
     return render_template("index.html")
 
 
-@app.route("/analyze")
-def analyze():
-    return "Auswertung "
+@app.route("/overview")
+def overview():
+    return render_template("overview.html")
+
+
+@app.route("/formular")
+def formular():
+    return render_template("formular.html")
 
 
 if __name__ == "__main__":

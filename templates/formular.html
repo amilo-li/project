@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% block title %}Investitionsprojekt{% endblock %}
+
+{% block content %}
+<h1>Investitionsprojekt beantragen</h1>
+<form method="POST">
+    <h2>Organisatorisches</h2>
+    <div class="form-group">
+        <!-- Ändern?? -->
+        <label for="A_name">Antragsteller/in</label>
+        <input class="form-control" type="text" name="A_name" placeholder="Vorname und Name" id="A_name" required>
+        <div class="valid-feedback">Valid.</div>
+    </div>
+    <div class="form-group">
+        <!-- Ändern?? -->
+        <label for="P_name">Projektleiter/in</label>
+        <input class="form-control" type="text" name="P_name" placeholder="Vorname und Name" id="P_name" required>
+        <div class="valid-feedback">Valid.</div>
+    </div>
+    <h2>Eckdaten</h2>
+    <div class="form-group">
+        <!-- Ändern?? -->
+        <label for="A_name">Projektbezeichnung</label>
+        <input class="form-control" type="text" name="title" id="title" required>
+        <div class="valid-feedback">Valid.</div>
+    </div>
+    <div class="form-group">
+        <!-- Ändern?? -->
+        <label for="A_name">Priorität</label><br>
+        <!-- Klasse?? -->
+        <input type="radio" name="prio1" id="prio1" value="prio1">
+        <label for="prio1">1 (hoch)</label><br>
+        <input type="radio" name="prio2" id="prio2" value="prio2">
+        <label for="prio2">2 (mittel)</label><br>
+        <input type="radio" name="prio3" id="prio3" value="prio3">
+        <label for="prio3">3 (tief)</label><br>
+
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female
+        <div class="valid-feedback">Valid.</div>
+    </div>
+    <div class="form-group">
+        <!-- Ändern?? -->
+        <label for="A_name">Antragsteller/in</label>
+        <input class="form-control" type="text" name="A_name" placeholder="Vorname und Name" id="A_name" required>
+        <div class="valid-feedback">Valid.</div>
+    </div>
+    <div class="form-group">
+        <!-- Ändern?? -->
+        <label for="A_name">Antragsteller/in</label>
+        <input class="form-control" type="text" name="A_name" placeholder="Vorname und Name" id="A_name" required>
+        <div class="valid-feedback">Valid.</div>
+    </div>
+    <div class="form-group">
+        <!-- Ändern?? -->
+        <label for="A_name">Antragsteller/in</label>
+        <input class="form-control" type="text" name="A_name" placeholder="Vorname und Name" id="A_name" required>
+        <div class="valid-feedback">Valid.</div>
+    </div>
+    <div class="form-group">
+        <!-- Ändern?? -->
+        <label for="A_name">Antragsteller/in</label>
+        <input class="form-control" type="text" name="A_name" placeholder="Vorname und Name" id="A_name" required>
+        <div class="valid-feedback">Valid.</div>
+    </div>
+    <div class="form-group">
+        <!-- Ändern?? -->
+        <label for="A_name">Antragsteller/in</label>
+        <input class="form-control" type="text" name="A_name" placeholder="Vorname und Name" id="A_name" required>
+        <div class="valid-feedback">Valid.</div>
+    </div>
+    <div class="form-group">
+        <!-- Ändern?? -->
+        <label for="A_name">Antragsteller/in</label>
+        <input class="form-control" type="text" name="A_name" placeholder="Vorname und Name" id="A_name" required>
+        <div class="valid-feedback">Valid.</div>
+    </div>
+    <div class="form-group">
+        <!-- Ändern?? -->
+        <label for="A_name">Antragsteller/in</label>
+        <input class="form-control" type="text" name="A_name" placeholder="Vorname und Name" id="A_name" required>
+        <div class="valid-feedback">Valid.</div>
+    </div>
+</form>
+{% endblock %}

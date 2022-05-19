@@ -1,11 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Investitionsprojekt</title>
-</head>
-<body>
-<h1>Investitionsprojekt beantragen</h1>
-<a>Fülle die nachfolgenden Felder aus um einen Investitionsantrag einzureichen. </a>
-</body>
-</html>
+{% extends "base.html" %}
+{% block title %}Investitionsprojekt{% endblock %}
+
+{% block content %}
+<h1>Hallo</h1>
+<p>
+    Mittels untenstehenden Buttons kannst du ein Antrag für ein neues Investitionsprojekt erstellen oder zur Übersicht navigieren.<br><br>
+    <a class="btn btn-primary btn-lg" href="{{ url_for('formular') }}" role="button" type="submit">Investitionsprojekt beantragen</a>
+    <a class="btn btn-primary btn-lg" href="{{ url_for('overview') }}" role="button" type="submit">Übersicht aller Investitionsprojekte</a><br><br>
+</p>
+
+{% endblock %}
