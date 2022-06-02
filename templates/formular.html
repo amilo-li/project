@@ -3,30 +3,30 @@
 
 {% block content %}
 <h1>Investitionsprojekt beantragen</h1>
+<h3 style="color: green;"><i>{{ antrag }}</i></h3>
 <form method="POST">
     <h2>Organisatorisches</h2>
     <div class="form-group">
         <!-- Ändern?? -->
-        <label for="A_name">Antragsteller/in</label>
-        <input class="form-control" type="text" name="A_name" placeholder="Vorname und Name" id="A_name" required>
+        <label for="antragsteller">Antragsteller/in</label>
+        <input class="form-control" type="text" name="antragsteller" placeholder="Vorname und Name" id="antragsteller" required>
         <div class="valid-feedback">Valid.</div>
     </div>
     <div class="form-group">
         <!-- Ändern?? -->
-        <label for="P_name">Projektleiter/in</label>
-        <input class="form-control" type="text" name="P_name" placeholder="Vorname und Name" id="P_name" required>
+        <label for="projektleiter">Projektleiter/in</label>
+        <input class="form-control" type="text" name="projektleiter" placeholder="Vorname und Name" id="projektleiter" required>
         <div class="valid-feedback">Valid.</div>
     </div>
     <h2>Eckdaten</h2>
     <div class="form-group">
         <!-- Ändern?? -->
-        <label for="A_name">Projektbezeichnung</label>
-        <input class="form-control" type="text" name="title" id="title" required>
+        <label for="titel">Definiere den Titel / Bezeichnung deines Projektes</label>
+        <input class="form-control" type="text" name="titel" id="titel" required>
         <div class="valid-feedback">Valid.</div>
     </div>
+    <p>Wähle die Priorität aus</p>
     <div class="form-group">
-        <!-- Ändern?? -->
-        <label for="A_name">Priorität</label><br>
         <!-- Klasse?? -->
         <input type="radio" name="prio1" id="prio1" value="prio1">
         <label for="prio1">1 (hoch)</label><br>
@@ -34,13 +34,15 @@
         <label for="prio2">2 (mittel)</label><br>
         <input type="radio" name="prio3" id="prio3" value="prio3">
         <label for="prio3">3 (tief)</label><br>
-
-        <input type="radio" name="gender" value="male"> Male
-        <input type="radio" name="gender" value="female"> Female
+        <div class="valid-feedback">Valid.</div>
+    </div>
+    <h2>Terminplan</h2>
+    <div class="form-group">
+        <label for="datum">Meilenstein 1</label>
+        <input class="form-control" type="text" name="datum" placeholder="Datum" id="datum" required>
         <div class="valid-feedback">Valid.</div>
     </div>
     <div class="form-group">
-        <!-- Ändern?? -->
         <label for="A_name">Antragsteller/in</label>
         <input class="form-control" type="text" name="A_name" placeholder="Vorname und Name" id="A_name" required>
         <div class="valid-feedback">Valid.</div>
@@ -81,5 +83,6 @@
         <input class="form-control" type="text" name="A_name" placeholder="Vorname und Name" id="A_name" required>
         <div class="valid-feedback">Valid.</div>
     </div>
+    <button type="submit" class="btn btn-primary">Speichern</button><br><br>
 </form>
 {% endblock %}
