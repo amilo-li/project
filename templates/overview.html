@@ -4,12 +4,12 @@
 {% block content %}
 
     <table class="container">
-        <h1>Investitionsprojekt Übersicht</h1>
+        <h1>Investitionsprojekte Übersicht</h1>
         <form method="POST">
             Mittels untenstehendem Auswahlfeld kannst du die Projektanträge filtern.<br><br>
             <div class="row g-12">
                 <div class="form-group col-12">
-                    <h3><label for="ddpAntrag">Projektantrag</label></h3>
+                    <h3><label for="ddpAntrag">Projektanträge</label></h3><br>
                     <select id="ddpAntrag" class="form-control" name="Projektantrag">
                         <option selected>Projektantrag auswählen...</option>
                         <option>Transport</option>
@@ -81,5 +81,5 @@
         </table>
         {% endif %}
     </div>
-
+</table>
 {% endblock %}

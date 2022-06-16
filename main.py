@@ -61,5 +61,11 @@ def overview():
     return render_template('overview.html', data=eingabe, allitems=filter_list, Filter=filtered)
 
 
+# Analysis
+@app.route("/analysis", methods=['GET', 'POST'])
+def analysis():
+    return render_template('analysis.html')
+
+
 if __name__ == "__main__":
     app.run(debug=True, port=5000)

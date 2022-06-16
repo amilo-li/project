@@ -5,43 +5,78 @@
 <h1>Investitionsprojekt beantragen</h1>
 <h3 style="color: green;"><i>{{ antrag }}</i></h3>
 <form method="POST">
-    <h2>Organisatorisches</h2>
-    <div class="form-group">
+    <br><br><h4>Organisatorisches</h4>
+    <div class="col-6">
         <!-- Ändern?? -->
         <label for="antragsteller">Antragsteller/in</label>
         <input class="form-control" type="text" name="antragsteller" placeholder="Vorname und Name" id="antragsteller" required>
         <div class="valid-feedback">Valid.</div>
     </div>
-    <div class="form-group">
+    <div class="col-6">
         <!-- Ändern?? -->
         <label for="projektleiter">Projektleiter/in</label>
         <input class="form-control" type="text" name="projektleiter" placeholder="Vorname und Name" id="projektleiter" required>
         <div class="valid-feedback">Valid.</div>
     </div>
-    <h2>Eckdaten</h2>
-    <div class="form-group">
+    <br><br><h4>Eckdaten</h4>
+    <div class="col-6">
+        <label for="businessunit">Geschäftsfeld</label>
+        <select class="form-select" type="text" name="businessunit" id="businessunit" required>
+            <option selected>Geschäftsfeld auswählen...</option>
+            <option>Informatik</option>
+            <option>Sales</option>
+            <option>Human Ressources</option>
+            <option>Buchhaltung</option>
+        </select>
+    </div>
+    <div class="col-6">
         <!-- Ändern?? -->
         <label for="titel">Definiere den Titel / Bezeichnung deines Projektes</label>
         <input class="form-control" type="text" name="titel" id="titel" required>
         <div class="valid-feedback">Valid.</div>
     </div>
     <p>Wähle die Priorität aus</p>
-    <div class="form-group">
-        <!-- Klasse?? -->
-        <input type="radio" name="prio1" id="prio1" value="prio1">
-        <label for="prio1">1 (hoch)</label><br>
-        <input type="radio" name="prio2" id="prio2" value="prio2">
-        <label for="prio2">2 (mittel)</label><br>
-        <input type="radio" name="prio3" id="prio3" value="prio3">
-        <label for="prio3">3 (tief)</label><br>
-        <div class="valid-feedback">Valid.</div>
+    <!-- Prio 1 -->
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="prio1"/>
+        <label class="form-check-label" for="prio1"> 1 - hoch </label>
     </div>
-    <h2>Terminplan</h2>
-    <div class="form-group">
+    <!-- Prio 2 -->
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="prio2" />
+        <label class="form-check-label" for="prio2"> 2 - mittel </label>
+    </div>
+    <!-- Prio 3 -->
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="prio3"/>
+        <label class="form-check-label" for="prio3"> 3 - tief </label>
+    </div>
+    <br><br><h4>Terminplan</h4>
+    <div class="row">
+    <div class="col-2">
         <label for="datum">Meilenstein 1</label>
-        <input class="form-control" type="text" name="datum" placeholder="Datum" id="datum" required>
+        <input class="form-control" type="text" name="datum" placeholder="Datum" id="datum">
         <div class="valid-feedback">Valid.</div>
     </div>
-    <button type="submit" class="btn btn-primary">Speichern</button><br><br>
+    <div class="col-2">
+        <label for="datum">Meilenstein 2</label>
+        <input class="form-control" type="text" name="datum" placeholder="Datum" id="datum">
+        <div class="valid-feedback">Valid.</div>
+    </div>
+    <div class="col-2 .offset-sm-2">
+        <label for="datum">Meilenstein 3</label>
+        <input class="form-control" type="text" name="datum" placeholder="Datum" id="datum">
+        <div class="valid-feedback">Valid.</div>
+    </div>
+    <div class="col-2">
+        <label for="datum">Enddatum</label>
+        <input class="form-control" type="text" name="datum" placeholder="Datum" id="datum">
+        <div class="valid-feedback">Valid.</div>
+    </div>
+    </div>
+    <br><br><button type="submit" class="btn btn-primary">Speichern</button><br><br>
 </form>
+
+
+<!-- Quelle Radio Buttons: https://mdbootstrap.com/docs/standard/forms/radio -->
 {% endblock %}
