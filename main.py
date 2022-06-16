@@ -15,12 +15,7 @@ def start():
     return render_template('index.html', user="Samira")  # hier wird der Begrüssungsname mitgegeben (Samira)
 
 
-@app.route("/overview")
-def overview():
-    return render_template("overview.html")
-
-
-# # Angaben im Formular erfassen
+# Angaben im Formular erfassen
 @app.route("/formular", methods=["POST", "GET"])
 def formular():
     # Ausführen, wenn auf den Button senden geklickt wird
@@ -41,6 +36,29 @@ def formular():
     # Die leeren Felder aus formular.html werden dargestellt. Mittels Speichern Button (POST) werden die Daten mit
     # der Funktion daten.speichern (definiert in der Datei daten.py) im JSON File gespeichert
     return render_template("formular.html")
+
+
+# Übersicht der Investitionsprojekte -> Daten werden aus daten.py geladen
+@app.route("/overview", methods=["GET", "POST"])
+def overview():
+    eingabe = daten.antrag_laden()
+    filter_list = []
+    filter_value = ""
+    filter_key = ""
+    filtered = False
+
+    # if-Bedingung, falls gefiltert werden möchte
+    if request.method == 'POST':
+        filtered = True
+        Projektantrag = request.form['Projektantrag']
+
+        for key, antrag in eingabe.items():  # in dieser for-Schleife wird gefiltert und die leere Liste gefüllt
+            if antrag[filter_key] == filter_value:
+                filter_list.append(antrag)
+
+
+    # hier werden die Informationen mitgegeben, die im template "uebersicht" aufgerufen werden können
+    return render_template('overview.html', data=eingabe, allitems=filter_list, Filter=filtered)
 
 
 if __name__ == "__main__":

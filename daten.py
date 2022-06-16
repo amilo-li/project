@@ -12,10 +12,10 @@ def speichern(antragsteller, projektleiter, titel, datum):
         datei_content = {}
 
     datei_content[str(datetime.now())] = {'Antragsteller': antragsteller,
-                                         'Projektleiter': projektleiter,
-                                         'Titel': titel,
-                                         'Datum': datum,
-                                        }
+                                          'Projektleiter': projektleiter,
+                                          'Titel': titel,
+                                          'Datum': datum,
+                                          }
 
     with open(datei, "w") as open_file:
         json.dump(datei_content, open_file, indent=4)
@@ -32,3 +32,5 @@ def antrag_laden():
         datei_content = {}
 
     return datei_content
+
+

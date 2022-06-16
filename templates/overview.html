@@ -2,6 +2,84 @@
 {% block title %}Investitionsprojekt{% endblock %}
 
 {% block content %}
-<h1>Investitionsprojekt Übersicht</h1>
+
+    <table class="container">
+        <h1>Investitionsprojekt Übersicht</h1>
+        <form method="POST">
+            Mittels untenstehendem Auswahlfeld kannst du die Projektanträge filtern.<br><br>
+            <div class="row g-12">
+                <div class="form-group col-12">
+                    <h3><label for="ddpAntrag">Projektantrag</label></h3>
+                    <select id="ddpAntrag" class="form-control" name="Projektantrag">
+                        <option selected>Projektantrag auswählen...</option>
+                        <option>Transport</option>
+                        <option>Lebensmittel</option>
+                        <option>Auto / Motorrad</option>
+                        <option>Restaurant / Bar / Club</option>
+                        <option>Schönheit</option>
+                        <option>Shopping</option>
+                        <option>Reisen</option>
+                        <option>Haushalt</option>
+                        <option>Freizeit</option>
+                        <option>Services</option>
+                        <option>Divers</option>
+                        <option>Cash</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row g-3">
+                <div class="col">
+                    <button type="submit" class="btn btn-primary">Suchen</button>
+                    <a href="{{ url_for('overview') }}" type="reset" class="btn btn-danger" role="button">Zurücksetzen</a>
+                </div>
+            </div>
+        </form>
+
+        <div class="column">
+            {% if Filter %}
+            {% if allitems %}
+            <table class="table">
+              <thead>
+                <tr>
+                    <th scope="col">Antragsteller/in</th>
+                    <th scope="col">Projektleiter/in</th>
+                    <th scope="col">Titel</th>
+                    <th scope="col">Priorität</th>
+                </tr>
+              </thead>
+              <tbody>
+              {% for content in allitems %}
+                    <tr>
+                        {% for key, value in content.items() %}
+                      <td>{{ value }}</td>
+                        {% endfor %}
+                    </tr>
+              {% endfor %}
+              </tbody>
+            </table>
+            {% else %}
+            Kein Eintrag zu dieser Kategorie gefunden.
+            {% endif %}
+            {% endif %}
+        </div>
+        {% if not Filter %}
+        <table class="table">
+            <!-- for-Condition -->
+            <tr>
+                <th scope="col">Antragsteller/in</th>
+                <th scope="col">Projektleiter/in</th>
+                <th scope="col">Titel</th>
+                <th scope="col">Datum</th>
+            </tr>
+            {% for key, values_dict in data.items()%}
+            <tr>
+                    {% for key2, value in values_dict.items()%}
+                    <td><p class="value">{{ value }}</p></td>
+                    {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+        {% endif %}
+    </div>
 
 {% endblock %}

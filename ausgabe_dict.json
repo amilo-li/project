@@ -70,5 +70,29 @@
         "Projektleiter": "k",
         "Titel": "k",
         "Datum": "k"
+    },
+    "2022-06-16 12:52:04.377038": {
+        "Antragsteller": "df",
+        "Projektleiter": "sdf",
+        "Titel": "dfs",
+        "Datum": "sdf"
+    },
+    "2022-06-16 12:55:14.228650": {
+        "Antragsteller": "Rebekka John",
+        "Projektleiter": "Rebekka John",
+        "Titel": "asd",
+        "Datum": "23.05.2022"
+    },
+    "2022-06-16 13:00:14.454334": {
+        "Antragsteller": "Rebekka John",
+        "Projektleiter": "sadad",
+        "Titel": "asd",
+        "Datum": "23.05.2022"
+    },
+    "2022-06-16 13:27:39.175938": {
+        "Antragsteller": "Test160622",
+        "Projektleiter": "Rebekka John",
+        "Titel": "Titel Projekt",
+        "Datum": "16.06.2022"
     }
 }
