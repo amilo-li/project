@@ -3,34 +3,23 @@
 
 {% block content %}
 
-    <table class="container">
+<table class="container">
         <h1>Investitionsprojekte Übersicht</h1>
         <form method="POST">
-            Mittels untenstehendem Auswahlfeld kannst du die Projektanträge filtern.<br><br>
-            <div class="row g-12">
-                <div class="form-group col-12">
-                    <h3><label for="ddpAntrag">Projektanträge</label></h3><br>
-                    <select id="ddpAntrag" class="form-control" name="Projektantrag">
-                        <option selected>Projektantrag auswählen...</option>
-                        <option>Transport</option>
-                        <option>Lebensmittel</option>
-                        <option>Auto / Motorrad</option>
-                        <option>Restaurant / Bar / Club</option>
-                        <option>Schönheit</option>
-                        <option>Shopping</option>
-                        <option>Reisen</option>
-                        <option>Haushalt</option>
-                        <option>Freizeit</option>
-                        <option>Services</option>
-                        <option>Divers</option>
-                        <option>Cash</option>
+            Mittels untenstehendem Auswahlfeld kannst du die Projektanträge nach dem Geschäftsbereich filtern.<br><br>
+            <div class="row g-3">
+                <div class="form-group col-3">
+                    <select id="dd_businessunit" class="form-control" name="businessunit">
+                        <option selected>Geschäftsbereich auswählen...</option>
+                        <option>Informatik</option>
+                        <option>Sales</option>
+                        <option>Buchhaltung</option>
+                        <option>Entwicklung</option>
                     </select>
                 </div>
-            </div>
-            <div class="row g-3">
-                <div class="col">
-                    <button type="submit" class="btn btn-primary">Suchen</button>
-                    <a href="{{ url_for('overview') }}" type="reset" class="btn btn-danger" role="button">Zurücksetzen</a>
+                <div class="col-3">
+                    <button type="submit" class="btn btn-primary">Filtern</button>
+                    <a href="{{ url_for('overview') }}" type="reset" class="btn btn-danger" role="button">Filter zurücksetzen</a>
                 </div>
             </div>
         </form>
@@ -39,26 +28,44 @@
             {% if Filter %}
             {% if allitems %}
             <table class="table">
-              <thead>
+                <thead>
                 <tr>
                     <th scope="col">Antragsteller/in</th>
                     <th scope="col">Projektleiter/in</th>
+                    <th scope="col">Geschäftsfeld</th>
                     <th scope="col">Titel</th>
                     <th scope="col">Priorität</th>
+                    <th scope="col">Total Fremdleistungen</th>
+                    <th scope="col">Total Eigenleistungen</th>
+                    <th scope="col">Investitionssumme</th>
+                    <th scope="col">Startdatum</th>
+                    <th scope="col">1.Meilenstein</th>
+                    <th scope="col">2.Meilenstein</th>
+                    <th scope="col">3.Meilenstein</th>
+                    <th scope="col">4.Meilenstein</th>
+                    <th scope="col">Enddatum</th>
+                    <th scope="col">1.Quartal</th>
+                    <th scope="col">2.Quartal</th>
+                    <th scope="col">3.Quartal</th>
+                    <th scope="col">4.Quartal</th>
+                    <th scope="col">Stunden Informatik</th>
+                    <th scope="col">Stunden Buchhaltung</th>
+                    <th scope="col">Stunden Marketing</th>
+                    <th scope="col">Stunden Entwicklung</th>
                 </tr>
-              </thead>
-              <tbody>
-              {% for content in allitems %}
-                    <tr>
-                        {% for key, value in content.items() %}
-                      <td>{{ value }}</td>
-                        {% endfor %}
-                    </tr>
-              {% endfor %}
-              </tbody>
+                </thead>
+                <tbody>
+                {% for content in allitems %}
+                <tr>
+                    {% for key, value in content.items() %}
+                    <td>{{ value }}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+                </tbody>
             </table>
             {% else %}
-            Kein Eintrag zu dieser Kategorie gefunden.
+            Kein Projektantrag zu diesem Filter gefunden.
             {% endif %}
             {% endif %}
         </div>
@@ -68,8 +75,26 @@
             <tr>
                 <th scope="col">Antragsteller/in</th>
                 <th scope="col">Projektleiter/in</th>
+                <th scope="col">Geschäftsfeld</th>
                 <th scope="col">Titel</th>
-                <th scope="col">Datum</th>
+                <th scope="col">Priorität</th>
+                <th scope="col">Total Fremdleistungen</th>
+                <th scope="col">Total Eigenleistungen</th>
+                <th scope="col">Investitionssumme</th>
+                <th scope="col">Startdatum</th>
+                <th scope="col">1.Meilenstein</th>
+                <th scope="col">2.Meilenstein</th>
+                <th scope="col">3.Meilenstein</th>
+                <th scope="col">4.Meilenstein</th>
+                <th scope="col">Enddatum</th>
+                <th scope="col">1.Quartal</th>
+                <th scope="col">2.Quartal</th>
+                <th scope="col">3.Quartal</th>
+                <th scope="col">4.Quartal</th>
+                <th scope="col">Stunden Informatik</th>
+                <th scope="col">Stunden Buchhaltung</th>
+                <th scope="col">Stunden Marketing</th>
+                <th scope="col">Stunden Entwicklung</th>
             </tr>
             {% for key, values_dict in data.items()%}
             <tr>

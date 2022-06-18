@@ -1,98 +1,74 @@
 {
-    "2022-06-02 14:55:40.704947": {
+    "2022-06-18 15:44:08.300326": {
         "Antragsteller": "Rebekka John",
-        "Projektleiter": "Rebekka John",
+        "Projektleiter": "sadad",
+        "Businessunit": "Informatik",
+        "Titel": "asd",
+        "Priorit\u00e4t": "on",
+        "Startdatum": "",
+        "Meilenstein 1": "",
+        "Meilenstein 2": "",
+        "Meilenstein 3": "",
+        "Meilenstein 4": "",
+        "Enddatum": "",
+        "1.Quartal": "3",
+        "2.Quartal": "3",
+        "3.Quartal": "3",
+        "4.Quartal": "3",
+        "Total Fremdleistungen": 12.0,
+        "Informatik Aufwand": "3",
+        "Buchhaltung Aufwand": "3",
+        "Marketing Aufwand": "3",
+        "Entwicklung Aufwand": "3",
+        "Total Eigenleistungen": 666.0,
+        "Total Investitionssumme": 678.0
+    },
+    "2022-06-18 15:55:44.552461": {
+        "Antragsteller": "Rebekka John",
+        "Projektleiter": "sadad",
+        "Businessunit": "Informatik",
         "Titel": "Rebekka John",
-        "Datum": "23.05.2022"
+        "Priorit\u00e4t": "2 - mittel",
+        "Startdatum": "2022-06-23",
+        "Meilenstein 1": "",
+        "Meilenstein 2": "2022-06-26",
+        "Meilenstein 3": "",
+        "Meilenstein 4": "",
+        "Enddatum": "",
+        "1.Quartal": "1",
+        "2.Quartal": "1",
+        "3.Quartal": "1",
+        "4.Quartal": "1",
+        "Total Fremdleistungen": 4.0,
+        "Informatik Aufwand": "2",
+        "Buchhaltung Aufwand": "2",
+        "Marketing Aufwand": "2",
+        "Entwicklung Aufwand": "2",
+        "Total Eigenleistungen": 444.0,
+        "Total Investitionssumme": 448.0
     },
-    "2022-06-02 15:05:18.706055": {
+    "2022-06-18 16:00:01.156268": {
         "Antragsteller": "Rebekka John",
-        "Projektleiter": "Test",
-        "Titel": "Test",
-        "Datum": "10.05.3022"
-    },
-    "2022-06-02 15:09:51.473708": {
-        "Antragsteller": "Rebekka John",
-        "Projektleiter": "Rebekka John",
-        "Titel": "dsaf",
-        "Datum": "10.05.3022"
-    },
-    "2022-06-02 15:21:12.913373": {
-        "Antragsteller": "Rebekka John",
-        "Projektleiter": "Rebekka John",
+        "Projektleiter": "Rebekka John 23",
+        "Businessunit": "Informatik",
         "Titel": "asd",
-        "Datum": "10.05.3022"
-    },
-    "2022-06-02 15:25:40.326960": {
-        "Antragsteller": "Rebekka John",
-        "Projektleiter": "sadad",
-        "Titel": "sadad",
-        "Datum": "00.05.2022"
-    },
-    "2022-06-02 15:43:37.441741": {
-        "Antragsteller": "Rebekka John",
-        "Projektleiter": "sadad",
-        "Titel": "asd",
-        "Datum": "23.05.2022"
-    },
-    "2022-06-02 16:00:57.384132": {
-        "Antragsteller": "Rebekka John",
-        "Projektleiter": "Rebekka John",
-        "Titel": "dsaf",
-        "Datum": "10.05.3022"
-    },
-    "2022-06-02 16:02:55.471030": {
-        "Antragsteller": "Rebekka John",
-        "Projektleiter": "Rebekka John",
-        "Titel": "Rebekka John",
-        "Datum": "Rebekka John"
-    },
-    "2022-06-02 16:04:41.474254": {
-        "Antragsteller": "Rebekka John",
-        "Projektleiter": "s",
-        "Titel": "s",
-        "Datum": "s"
-    },
-    "2022-06-02 16:06:15.075764": {
-        "Antragsteller": "d",
-        "Projektleiter": "d",
-        "Titel": "d",
-        "Datum": "d"
-    },
-    "2022-06-02 16:08:39.386506": {
-        "Antragsteller": "h",
-        "Projektleiter": "h",
-        "Titel": "h",
-        "Datum": "k"
-    },
-    "2022-06-02 16:09:17.160982": {
-        "Antragsteller": "k",
-        "Projektleiter": "k",
-        "Titel": "k",
-        "Datum": "k"
-    },
-    "2022-06-16 12:52:04.377038": {
-        "Antragsteller": "df",
-        "Projektleiter": "sdf",
-        "Titel": "dfs",
-        "Datum": "sdf"
-    },
-    "2022-06-16 12:55:14.228650": {
-        "Antragsteller": "Rebekka John",
-        "Projektleiter": "Rebekka John",
-        "Titel": "asd",
-        "Datum": "23.05.2022"
-    },
-    "2022-06-16 13:00:14.454334": {
-        "Antragsteller": "Rebekka John",
-        "Projektleiter": "sadad",
-        "Titel": "asd",
-        "Datum": "23.05.2022"
-    },
-    "2022-06-16 13:27:39.175938": {
-        "Antragsteller": "Test160622",
-        "Projektleiter": "Rebekka John",
-        "Titel": "Titel Projekt",
-        "Datum": "16.06.2022"
+        "Priorit\u00e4t": "1 - hoch",
+        "Total Fremdleistungen": 8.0,
+        "Total Eigenleistungen": 444.0,
+        "Total Investitionssumme": 452.0,
+        "Startdatum": "2022-06-23",
+        "Meilenstein 1": "2022-06-15",
+        "Meilenstein 2": "2022-06-30",
+        "Meilenstein 3": "2022-07-05",
+        "Meilenstein 4": "",
+        "Enddatum": "",
+        "1.Quartal": "2",
+        "2.Quartal": "2",
+        "3.Quartal": "2",
+        "4.Quartal": "2",
+        "Informatik Aufwand": "2",
+        "Buchhaltung Aufwand": "2",
+        "Marketing Aufwand": "2",
+        "Entwicklung Aufwand": "2"
     }
 }
