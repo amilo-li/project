@@ -1,15 +1,12 @@
-
+<!-- base.html wird eingebunden -->
 {% extends "base.html" %}
 {% block title %}Investitionsprojekt{% endblock %}
-
 {% block content %}
 <h1>Auswertung der Investitionsprojekte</h1>
 <p>
-    Auf der untenstehenden Grafik ist die Auswertung der Investitionsprojekte dargestellt.<br><br>
+    Im Balkendiagramm werden die Investitionssummen in CHF pro Geschäftsfeld aufgezeigt
+    und im Gantt-Chart sind die Dauer der Projekte dargestellt.<br><br>
 </p>
 {{ viz_bar|safe}}
 {{ viz_gantt|safe}}
-
-
-
 {% endblock %}
