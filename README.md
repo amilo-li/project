@@ -24,7 +24,7 @@ Titel des Projektes, Priorität, Terminplan, externe Kosten und interne Kosten.
 ### Datenverarbeitung
 ###### **Speicherung und Ausgabe:**
 Mittels der Funktion in Python (daten.py) werden die Input Felder als Parameter übergeben und in der Json-Datei 
-(ausgabe_dict.json)gespeichert. 
+(ausgabe_dict.json) gespeichert. 
 
 ###### **Berechnung der Werte:**
 Aufgrund der Angaben aus dem Formular werden folgende Werte berechnet: 
@@ -36,7 +36,7 @@ Aufgrund der Angaben aus dem Formular werden folgende Werte berechnet:
 Die Analyse umfasst die Tabelle und die Grafische-Auswertung.
 - Übersicht (Tabelle) aller laufenden Investitionsprojekte mit Filterfunktion 
 - Balkendiagramm der Investitionssummen pro Geschäftsfeld 
-- Gantt-Chart mit Dauer der einzelnen Projekte (Start- und Enddatum)
+- Gantt-Chart mit Dauer der einzelnen Projekte (Start- bis Enddatum)
 
 ## Ablaufdiagramm
 <img src="Flowchart.png">
