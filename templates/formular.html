@@ -3,11 +3,10 @@
 {% block title %}Investitionsprojekt{% endblock %}
 {% block content %}
 <div class="container ml-3">
-<h1>Investitionsprojekt beantragen</h1>
+    <h1>Investitionsprojekt erfassen</h1>
+    <!-- Success-Meldung wird gepostet, wenn auf Button senden geklickt wird, definiert in main.py -->
+    <h3 style="color: green;"><i>{{ antrag }}</i></h3>
 </div>
-<!-- Success-Meldung wird gepostet, wenn auf Button senden geklickt wird, definiert in main.py -->
-<h3 style="color: green;"><i>{{ antrag }}</i></h3>
-
 <!-- FORMULAR -->
 <div class="container mt-3">
     <h4>Organisatorisches</h4>
@@ -49,7 +48,7 @@
                 <!-- Quelle https://mdbootstrap.com/docs/standard/forms/radio -->
             </div>
         </div>
-        <div class="mb-3 mt-3">
+        <div class="mb-3 mt-3 col-6" >
             <label for="titel">Titel / Bezeichnung des Projektes</label>
             <input class="form-control" type="text" name="titel" id="titel" required>
             <div class="invalid-feedback">Bitte Pflichtfeld ausfüllen</div>
@@ -74,7 +73,7 @@
             <div class="invalid-feedback">Bitte Pflichtfeld ausfüllen</div>
         </div>
         <h4>Terminplan</h4>
-        <div class="mb-3 mt-3">
+        <div class="mb-3 mt-3 col-4">
             <div class="mb-3">
                 <label for="startdatum1">Startdatum</label>
                 <input class="form-control" type="date" name="startdatum" id="startdatum1" required>
@@ -103,31 +102,31 @@
             </div>
         </div>
         <h4>Finanzielles</h4>
-        <div class="mb-3 mt-3">
+        <div class="mb-3 mt-3 col-4">
             <div class="mb-3">
                 <label for="erstesQuartal1">Cash-Out 1. Quartal</label>
-                <input class="form-control" type="number" name="erstesQuartal" id="erstesQuartal1" required>
+                <input class="form-control" type="number" name="erstesQuartal" id="erstesQuartal1" placeholder="Betrag in CHF" required>
                 <div class="invalid-feedback">Bitte Pflichtfeld ausfüllen</div>
             </div>
             <div class="mb-3">
                 <label for="zweitesQuartal2">Cash-Out 2. Quartal</label>
-                <input class="form-control" type="number" name="zweitesQuartal" id="zweitesQuartal2" required>
+                <input class="form-control" type="number" name="zweitesQuartal" id="zweitesQuartal2" placeholder="Betrag in CHF" required>
                 <div class="invalid-feedback">Bitte Pflichtfeld ausfüllen</div>
             </div>
             <div class="mb-3">
                 <label for="drittesQuartal3">Cash-Out 3. Quartal</label>
-                <input class="form-control" type="number" name="drittesQuartal" id="drittesQuartal3" required>
+                <input class="form-control" type="number" name="drittesQuartal" id="drittesQuartal3" placeholder="Betrag in CHF" required>
                 <div class="invalid-feedback">Bitte Pflichtfeld ausfüllen</div>
             </div>
             <div class="mb-3">
                 <label for="viertesQuartal4">Cash-Out 4. Quartal</label>
-                <input class="form-control" type="number" name="viertesQuartal" id="viertesQuartal4" required>
+                <input class="form-control" type="number" name="viertesQuartal" id="viertesQuartal4" placeholder="Betrag in CHF" required>
                 <div class="invalid-feedback">Bitte Pflichtfeld ausfüllen</div>
             </div>
         </div>
         <h4>Interner Aufwand in Stunden</h4>
         <p>Berechnet zu einem Stundensatz 55.50 CHF</p>
-        <div class="mb-3 mt-3">
+        <div class="mb-3 mt-3 col-4">
             <div class="mb-3">
                 <label for="informatik1">Anzahl Stunden Informatik</label>
                 <input class="form-control" type="number" name="informatik" id="informatik1" required>
@@ -151,7 +150,6 @@
         </div>
         <br><br><button type="submit" class="btn btn-primary">Speichern</button><br><br>
     </form>
-
-<!-- Quelle: https://www.w3schools.com/bootstrap5/bootstrap_form_validation.php -->
-{% endblock %}
+    <!-- Quelle: https://www.w3schools.com/bootstrap5/bootstrap_form_validation.php -->
 </div>
+{% endblock %}

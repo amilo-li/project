@@ -6,7 +6,7 @@ import plotly.express as px
 from plotly.offline import plot
 import pandas as pd
 
-app = Flask(__name__)
+app = Flask("Investitionsprojekte")
 
 """
 Ich erkläre hiermit, dass dieses Projekt selbstständig entwickelt wurde und keine anderen als die angegebenen Quellen benutzt wurden.
@@ -16,7 +16,7 @@ Ich erkläre hiermit, dass dieses Projekt selbstständig entwickelt wurde und ke
 # Home / Startseite
 @app.route('/', methods=['GET', 'POST'])
 def start():
-    return render_template('index.html', user="Samira")  # hier wird der Begrüssungsname mitgegeben (Samira)
+    return render_template('index.html')
 
 
 # User Input Form Felder
@@ -53,8 +53,8 @@ def formular():
                         viertesQuartal, informatik, buchhaltung, marketing, entwicklung)
 
         # Success Meldung, wenn daten gespeichert sind
-        antrag_gespeichert = "Dein Investitionsantrag wurde gespeichert. Falls gewünscht kann ein weiterer " \
-                             "Antrag erfassen werden. "
+        antrag_gespeichert = "Dein Investitionsprojekt wurde gespeichert. Falls gewünscht kann ein weiterer " \
+                             "Eintrag erfassen werden."
 
         return render_template("formular.html", antrag=antrag_gespeichert)
 
@@ -86,7 +86,7 @@ def overview():
             if value[filter_key] == filter_value:
                 filter_list.append(value)
 
-    return render_template('overview.html', data=importeddata, allitems=filter_list, Filter=filtered)
+    return render_template('overview.html', data=importeddata, filter_data=filter_list, filter=filtered)
 
 
 # Auswertung der Daten
@@ -115,23 +115,19 @@ def analysis():
     # Quelle: https://plotly.com/python/figure-labels/
 
     # Zweite Auswertung Gant-Chart Projekt Start- / Enddatum
-    dictgant = {}
+    data_gantt = []
     # Für jeden key und value der importierten Daten
-    # Dictionary erstellen mit key = Wert Titel und values Wert Startdatum, Wert Enddatum
+    # Der Liste die Dictionary anfügen mit key = Wert Titel und values Wert Startdatum, Wert Enddatum
     for key, values in importdata.items():
-        titel = values["Titel"]
-        startdatum = values["Startdatum"]
-        enddatum = values["Enddatum"]
-        build_dict = {titel: {"Startdatum": startdatum, "Enddatum": enddatum}}
-        dictgant.update(build_dict)
+        data_gantt.append(dict(titel=values["Titel"], startdatum=values["Startdatum"], enddatum=values["Enddatum"]))
 
-    df = pd.DataFrame(dictgant)
-    # Erstellung des Gantt-Charts und Bennenung der Achsen
-    fig = px.timeline(df, x_start=startdatum, x_end=enddatum, y=titel)
+    df = pd.DataFrame(data_gantt)
+    # Erstellung des Gantt-Charts und Definition der Achsen
+    fig = px.timeline(df, x_start="startdatum", x_end="enddatum", y="titel")
     # Sortierung der Achse y Titel
     fig.update_yaxes(autorange="reversed")
     # output_type = div, da mit fig.show() die html Seite nicht mehr ersichtlich wäre
-    gant = plot(fig, output_type="div")
+    gantt = plot(fig, output_type="div")
     # Quelle: https://plotly.com/python/gantt/
 
     return render_template('analysis.html', viz_bar=bar, data=dictdiagram, viz_gantt=gantt)
