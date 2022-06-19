@@ -42,6 +42,29 @@ Die Analyse umfasst die Tabelle und die Grafische-Auswertung.
 <img src="Flowchart.png">
 
 ## Betrieb
+Flask, Plotly und Panda müssen installiert und in der Datei main.py importiert werden.
+<pre>
+    <code>
+    from flask import Flask
+    from flask import render_template
+    from flask import request
+    import daten
+    import plotly.express as px
+    from plotly.offline import plot
+    import pandas as pd
+    </code>
+</pre>
+
+Für die Speicherung der Daten muss json importiert sein und datetime für den Zeitstempel im dictionary.
+
+<pre>
+    <code>
+    import json
+    from datetime import datetime
+  </code>
+</pre>
+
+Die main.py Datei wird ausgeführt und die URL http://127.0.0.1:5000 kann aufgerufen werden.
 
 ## Erweiterungsmöglichkeiten
 ### Währung Euro
