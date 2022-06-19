@@ -1,50 +1,57 @@
 # Investitionsprojekte
 ## Inhalt
-1. [Ausgangslage des Projektes](#ausgangslage-des-projektes)
-2. [Funktion und Projektidee](#funktion-und-projektidee)
+1. [Ausgangslage des Projektes](#ausgangslage-und-projektidee)
+2. [Funktionen_und_Teilschritte](#funktionen-und-teilschritte)
 3. [Ablaufdiagramm](#ablaufdiagramm)
-4. [Ungelöste/unbearbeitete Probleme](#ungelsteunbearbeitete-probleme)
+4. [](#funktion-und-projektidee)
+5. [Ablaufdiagramm](#ablaufdiagramm)
+6. [Ungelöste/unbearbeitete Probleme](#ungelsteunbearbeitete-probleme)
 
 
-## Ausgangslage des Projektes
-Als Unternehmen ist es essenziell einen Überblick über geplante und laufende Investitionen 
-zu erhalten. Dabei sind Informationen wie Projektbeschreibung, interne und externe Kosten, Priorität und
-weitere Angaben relevant. Dies dient als Grundlage für die Entscheidung durch die Geschäftsleitung, ob das Projekt
-umgesetzt werden soll. Weiter soll eine Übersicht der Projekte realisiert werden.
-Dies dient als Basis für Budget Auswertung und Planung.
+## Ausgangslage und Projektidee
+Bei vielen Unternehmen sind die Angaben zu den Projekten nicht zentral verfügbar
+und keine Auswertung liegt vor. 
+Um einen Überblick und Analyse der Investitionsprojekte zu erhalten, soll mittels Eingabe in einem Formular die 
+Informationen zu einem Investitionsprojekt erfasst werden.
+Zudem sollen alle Investitionsprojekte in einer Tabelle mit Filterfunktion dargestellt werden
+und in Form eines Balkendiagramms und eines Gantt-Charts ausgewertet werden. 
 
-## Funktion und Projektidee
-***Dateneingabe 1 - interner Mitarbeiter***
-
+## Funktionen und Teilschritte
+### Dateneingabe
 Auf der Startseite kann ein neues Investitionsprojekt erfasst werden.
-Ein Formular öffnet sich mit Feldern wie Vorname / Name des Erfassers, Geschäftsfeld / Bereich, Titel des Projektes, 
-Beschreibung des Projektes, Priorität, Anfangs und Endtermin, Total externe Kosten, Interne Kosten für die Abteilungen:
-Informatik, Labor, Marketing (Eingabe von Stunden).
+Ein Formular öffnet sich mit Feldern wie Vorname / Name des Antragstellers und Projektleiters, Geschäftsfeld, 
+Titel des Projektes, Priorität, Terminplan, externe Kosten und interne Kosten.
 
-***Datenverarbeitung***
+### Datenverarbeitung
+###### **Speicherung und Ausgabe:**
+Mittels der Funktion in Python (daten.py) werden die Input Felder als Parameter übergeben und in der Json-Datei 
+(ausgabe_dict.json)gespeichert. 
 
-Folgende Werte werden berechnet:
-- Total Investitionssumme
-- Total interne Kosten pro Abteilung (Stundensatz multipliziert mit den Stunden)
+###### **Berechnung der Werte:**
+Aufgrund der Angaben aus dem Formular werden folgende Werte berechnet: 
+- Total Fremdleistungen (Summe Cash-Out 1 -4. Quartal)
+- Total Eigenleistungen (Summe aller Anzahl Stunden pro Abteilung multipliziert mit dem Stundensatz 55.50)
+- Total Investitionssumme (Summe von Fremd- und Eigenleistungen)
 
-***Dateneingabe 2 - Geschäftsleitung***
-
-Die Geschäftsleitung kann die Investitionsprojekte freigeben (Ja/Nein).
-Wird der Antrag freigegeben wechselt der Status auf "Genehmigt", wird 
-der Antrag abgelehnt wechselt der Status auf "Abgelehnt" und die Geschäftsleitung muss
-eine Begründung eintragen. 
-In jedem fall erhält anschliessend der Antragsteller eine Benachrichtigung. 
-
-***Auswertung***
-
-Die Auswertung umfasst:
-- Die Übersicht aller laufenden Investitionsprojekte 
-- Die Übersicht der laufenden Investitionsprojekte pro Geschäftsfeld / Bereich 
-- Total Investitionssumme pro Bereich -> Gegenüberstellung der abgeschlossenen Projekte vs. der laufenden und geplanten Projekte (relevant für Budgetplanung).
+### Analyse
+Die Analyse umfasst die Tabelle und die Grafische-Auswertung.
+- Übersicht (Tabelle) aller laufenden Investitionsprojekte mit Filterfunktion 
+- Balkendiagramm der Investitionssummen pro Geschäftsfeld 
+- Gantt-Chart mit Dauer der einzelnen Projekte (Start- und Enddatum)
 
 ## Ablaufdiagramm
+<img src="Flowchart.png">
 
+## Betrieb
 
-## Ungelöste/unbearbeitete Probleme
-- Investitionsprojekte für die Währung Euro.
-- Weitere Aufgaben an die Buchhaltung / Controlling / Facility Management usw. 
+## Erweiterungsmöglichkeiten
+###### **Währung Euro**
+Bei international tätigen Unternehmen ist es erfoderlich die Kosten in CHF als auch in EURO anzugeben.
+Die Umrechnung der Währung sollte automatisch im Formular integriert sein.
+
+###### **Erweiterung interne Abteilungen**
+Eine zusätzliche Erweiterung wäre, die internen Abteilungen miteinzubezihen.
+
+Mögliche Use Cases: 
+- Geschäftsleitung kann ein Projekt freigeben oder ablehnen. Wird es abgelehnt muss eine Begründung eingegeben werden, der Status wechselt auf "abgelehnt" und der Antragsteller erhält eine E-Mail. 
+- Die Buchhaltung trägt die effektiv angefallenen Kosten ein. Daraus wird berechnet ob das Projekt im Budget liegt. Ist dem nicht so, erscheinen diese Projekte rot in den Grafiken. 
