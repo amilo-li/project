@@ -64,7 +64,7 @@ Für die Speicherung der Daten muss json importiert sein und datetime für den Z
   </code>
 </pre>
 
-Die main.py Datei wird ausgeführt und die URL http://127.0.0.1:5000 kann aufgerufen werden.
+Wird die main.py Datei ausgeführt, kann die URL http://127.0.0.1:5000 aufgerufen werden.
 
 ## Erweiterungsmöglichkeiten
 ### Währung Euro
