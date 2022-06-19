@@ -12,12 +12,12 @@
 <div class="container mt-3">
     <h4>Organisatorisches</h4>
     <form class="was-validated" method="POST">
-        <div class="mb-3 mt-3">
+        <div class="mb-3 mt-3 col-6">
             <label for="antragsteller" class="form-label">Antragsteller/in</label>
             <input class="form-control" type="text" name="antragsteller" placeholder="Vorname und Name" id="antragsteller" required>
             <div class="invalid-feedback">Bitte Pflichtfeld ausfüllen</div>
         </div>
-        <div class="mb-3">
+        <div class="mb-3 col-6">
             <label for="projektleiter">Projektleiter/in</label>
             <input class="form-control" type="text" name="projektleiter" placeholder="Vorname und Name" id="projektleiter" required>
             <div class="invalid-feedback">Bitte Pflichtfeld ausfüllen</div>
@@ -27,7 +27,7 @@
             <p>Geschäftsfeld</p>
             <div class="form-group">
                 <!-- Informatik -->
-                <div class="form-check mb-3">
+                <div class="form-check">
                     <input type="radio" class="form-check-input" id="businessunit1" name="businessunit" value="Informatik" required>
                     <label class="form-check-label" for="businessunit1">Informatik</label>
                 </div>
@@ -57,17 +57,17 @@
         <p>Wähle die Priorität aus</p>
         <div class="form-group">
             <!-- Prio 1 -->
-            <div class="form-check mb-3">
+            <div class="form-check">
                 <input class="form-check-input" type="radio" name="prio" id="prio1" value="1 - hoch" required>
                 <label class="form-check-label" for="prio1"> 1 - hoch </label>
             </div>
             <!-- Prio 2 -->
-            <div class="form-check mb-3">
+            <div class="form-check">
                 <input class="form-check-input" type="radio" name="prio" id="prio2" value="2 - mittel" required>
                 <label class="form-check-label" for="prio2"> 2 - mittel </label>
             </div>
             <!-- Prio 3 -->
-            <div class="form-check mb-3">
+            <div class="form-check">
                 <input class="form-check-input" type="radio" name="prio" id="prio3" value="3 - tief" required>
                 <label class="form-check-label" for="prio3"> 3 - tief </label>
             </div>
