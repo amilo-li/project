@@ -39,16 +39,16 @@ Die Analyse umfasst die Tabelle und die Grafische-Auswertung.
 - Gantt-Chart mit Dauer der einzelnen Projekte (Start- und Enddatum)
 
 ## Ablaufdiagramm
-<img src="Flowchart.png">
+<img src="Flow-chart.png">
 
 ## Betrieb
 
 ## Erweiterungsmöglichkeiten
-###### **Währung Euro**
+### Währung Euro
 Bei international tätigen Unternehmen ist es erfoderlich die Kosten in CHF als auch in EURO anzugeben.
 Die Umrechnung der Währung sollte automatisch im Formular integriert sein.
 
-###### **Erweiterung interne Abteilungen**
+### Erweiterung interne Abteilungen
 Eine zusätzliche Erweiterung wäre, die internen Abteilungen miteinzubezihen.
 
 Mögliche Use Cases: 
