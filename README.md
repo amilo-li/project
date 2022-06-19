@@ -1,7 +1,7 @@
 # Investitionsprojekte
 ## Inhalt
 1. [Ausgangslage des Projektes](#ausgangslage-und-projektidee)
-2. [Funktionen_und_Teilschritte](#funktionen-und-teilschritte)
+2. [Funktionen und Teilschritte](#funktionen-und-teilschritte)
 3. [Ablaufdiagramm](#ablaufdiagramm)
 4. [Betrieb](#betrieb)
 5. [Erweiterungsmöglichkeiten](#erweiterungsmglichkeiten)
