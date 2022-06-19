@@ -3,9 +3,8 @@
 1. [Ausgangslage des Projektes](#ausgangslage-und-projektidee)
 2. [Funktionen_und_Teilschritte](#funktionen-und-teilschritte)
 3. [Ablaufdiagramm](#ablaufdiagramm)
-4. [](#funktion-und-projektidee)
-5. [Ablaufdiagramm](#ablaufdiagramm)
-6. [Ungelöste/unbearbeitete Probleme](#ungelsteunbearbeitete-probleme)
+4. [Betrieb](#betrieb)
+5. [Erweiterungsmöglichkeiten](#erweiterungsmglichkeiten)
 
 
 ## Ausgangslage und Projektidee
