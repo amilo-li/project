@@ -39,7 +39,7 @@ Die Analyse umfasst die Tabelle und die Grafische-Auswertung.
 - Gantt-Chart mit Dauer der einzelnen Projekte (Start- und Enddatum)
 
 ## Ablaufdiagramm
-<img src="Flow-chart.png">
+<img src="Flowchart.png">
 
 ## Betrieb
 
