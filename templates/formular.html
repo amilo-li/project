@@ -1,156 +1,157 @@
+<!-- base.html wird eingebunden -->
 {% extends "base.html" %}
 {% block title %}Investitionsprojekt{% endblock %}
-
 {% block content %}
+<div class="container ml-3">
 <h1>Investitionsprojekt beantragen</h1>
+</div>
+<!-- Success-Meldung wird gepostet, wenn auf Button senden geklickt wird, definiert in main.py -->
 <h3 style="color: green;"><i>{{ antrag }}</i></h3>
-<form method="POST">
-    <br><br><h4>Organisatorisches</h4>
-    <div class="col-6">
-        <!-- Ändern?? -->
-        <label for="antragsteller">Antragsteller/in</label>
-        <input class="form-control" type="text" name="antragsteller" placeholder="Vorname und Name" id="antragsteller" required>
-        <div class="valid-feedback">Valid.</div>
-    </div>
-    <div class="col-6">
-        <!-- Ändern?? -->
-        <label for="projektleiter">Projektleiter/in</label>
-        <input class="form-control" type="text" name="projektleiter" placeholder="Vorname und Name" id="projektleiter" required>
-        <div class="valid-feedback">Valid.</div>
-    </div>
-    <br><br><h4>Eckdaten</h4>
-    <div class="col-6">
-        <p>Geschäftsfeld</p>
+
+<!-- FORMULAR -->
+<div class="container mt-3">
+    <h4>Organisatorisches</h4>
+    <form class="was-validated" method="POST">
+        <div class="mb-3 mt-3">
+            <label for="antragsteller" class="form-label">Antragsteller/in</label>
+            <input class="form-control" type="text" name="antragsteller" placeholder="Vorname und Name" id="antragsteller" required>
+            <div class="invalid-feedback">Bitte Pflichtfeld ausfüllen</div>
+        </div>
+        <div class="mb-3">
+            <label for="projektleiter">Projektleiter/in</label>
+            <input class="form-control" type="text" name="projektleiter" placeholder="Vorname und Name" id="projektleiter" required>
+            <div class="invalid-feedback">Bitte Pflichtfeld ausfüllen</div>
+        </div>
+        <h4>Eckdaten</h4>
+        <div class="mb-3 mt-3">
+            <p>Geschäftsfeld</p>
+            <div class="form-group">
+                <!-- Informatik -->
+                <div class="form-check mb-3">
+                    <input type="radio" class="form-check-input" id="businessunit1" name="businessunit" value="Informatik" required>
+                    <label class="form-check-label" for="businessunit1">Informatik</label>
+                </div>
+                <!-- Sales -->
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="businessunit2" name="businessunit" value="Sales" required>
+                    <label class="form-check-label" for="businessunit2">Sales</label>
+                </div>
+                <!-- Marketing -->
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="businessunit3" name="businessunit" value="Marketing" required>
+                    <label class="form-check-label" for="businessunit3">Marketing</label>
+                </div>
+                <!-- Entwicklung -->
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="businessunit4" name="businessunit" value="Entwicklung" required>
+                    <label class="form-check-label" for="businessunit4">Entwicklung</label>
+                </div>
+                <!-- Quelle https://mdbootstrap.com/docs/standard/forms/radio -->
+            </div>
+        </div>
+        <div class="mb-3 mt-3">
+            <label for="titel">Titel / Bezeichnung des Projektes</label>
+            <input class="form-control" type="text" name="titel" id="titel" required>
+            <div class="invalid-feedback">Bitte Pflichtfeld ausfüllen</div>
+        </div>
+        <p>Wähle die Priorität aus</p>
         <div class="form-group">
-        <div class="form-check">
-            <input type="radio" class="form-check-input" id="businessunit1" name="businessunit" value="Informatik" required>
-            <label class="form-check-label" for="businessunit1">Informatik</label>
+            <!-- Prio 1 -->
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="prio" id="prio1" value="1 - hoch" required>
+                <label class="form-check-label" for="prio1"> 1 - hoch </label>
+            </div>
+            <!-- Prio 2 -->
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="prio" id="prio2" value="2 - mittel" required>
+                <label class="form-check-label" for="prio2"> 2 - mittel </label>
+            </div>
+            <!-- Prio 3 -->
+            <div class="form-check mb-3">
+                <input class="form-check-input" type="radio" name="prio" id="prio3" value="3 - tief" required>
+                <label class="form-check-label" for="prio3"> 3 - tief </label>
+            </div>
+            <div class="invalid-feedback">Bitte Pflichtfeld ausfüllen</div>
         </div>
-        <div class="form-check">
-            <input type="radio" class="form-check-input" id="businessunit2" name="businessunit" value="Sales" required>
-            <label class="form-check-label" for="businessunit2">Sales</label>
+        <h4>Terminplan</h4>
+        <div class="mb-3 mt-3">
+            <div class="mb-3">
+                <label for="startdatum1">Startdatum</label>
+                <input class="form-control" type="date" name="startdatum" id="startdatum1" required>
+                <div class="invalid-feedback">Bitte Pflichtfeld ausfüllen</div>
+            </div>
+            <div class="mb-3">
+                <label for="id_meilenstein1">Meilenstein 1</label>
+                <input class="form-control" type="date" name="meilenstein1" id="id_meilenstein1">
+            </div>
+            <div class="mb-3">
+                <label for="id_meilenstein2">Meilenstein 2</label>
+                <input class="form-control" type="date" name="meilenstein2" id="id_meilenstein2">
+            </div>
+            <div class="mb-3">
+                <label for="id_meilenstein3">Meilenstein 3</label>
+                <input class="form-control" type="date" name="meilenstein3" id="id_meilenstein3">
+            </div>
+            <div class="mb-3">
+                <label for="id_meilenstein4">Meilenstein 4</label>
+                <input class="form-control" type="date" name="meilenstein4" id="id_meilenstein4">
+            </div>
+            <div class="mb-3">
+                <label for="enddatum1">Enddatum</label>
+                <input class="form-control" type="date" name="enddatum" id="enddatum1" required>
+                <div class="invalid-feedback">Bitte Pflichtfeld ausfüllen</div>
+            </div>
         </div>
-        <div class="form-check">
-            <input type="radio" class="form-check-input" id="businessunit3" name="businessunit" value="Marketing" required>
-            <label class="form-check-label" for="businessunit3">Marketing</label>
+        <h4>Finanzielles</h4>
+        <div class="mb-3 mt-3">
+            <div class="mb-3">
+                <label for="erstesQuartal1">Cash-Out 1. Quartal</label>
+                <input class="form-control" type="number" name="erstesQuartal" id="erstesQuartal1" required>
+                <div class="invalid-feedback">Bitte Pflichtfeld ausfüllen</div>
+            </div>
+            <div class="mb-3">
+                <label for="zweitesQuartal2">Cash-Out 2. Quartal</label>
+                <input class="form-control" type="number" name="zweitesQuartal" id="zweitesQuartal2" required>
+                <div class="invalid-feedback">Bitte Pflichtfeld ausfüllen</div>
+            </div>
+            <div class="mb-3">
+                <label for="drittesQuartal3">Cash-Out 3. Quartal</label>
+                <input class="form-control" type="number" name="drittesQuartal" id="drittesQuartal3" required>
+                <div class="invalid-feedback">Bitte Pflichtfeld ausfüllen</div>
+            </div>
+            <div class="mb-3">
+                <label for="viertesQuartal4">Cash-Out 4. Quartal</label>
+                <input class="form-control" type="number" name="viertesQuartal" id="viertesQuartal4" required>
+                <div class="invalid-feedback">Bitte Pflichtfeld ausfüllen</div>
+            </div>
         </div>
-        <div class="form-check">
-            <input type="radio" class="form-check-input" id="businessunit4" name="businessunit" value="Entwicklung" required>
-            <label class="form-check-label" for="businessunit4">Entwicklung</label>
+        <h4>Interner Aufwand in Stunden</h4>
+        <p>Berechnet zu einem Stundensatz 55.50 CHF</p>
+        <div class="mb-3 mt-3">
+            <div class="mb-3">
+                <label for="informatik1">Anzahl Stunden Informatik</label>
+                <input class="form-control" type="number" name="informatik" id="informatik1" required>
+                <div class="invalid-feedback">Bitte Pflichtfeld ausfüllen</div>
+            </div>
+            <div class="mb-3">
+                <label for="buchhaltung1">Anzahl Stunden Buchhaltung</label>
+                <input class="form-control" type="number" name="buchhaltung" id="buchhaltung1" required>
+                <div class="invalid-feedback">Bitte Pflichtfeld ausfüllen</div>
+            </div>
+            <div class="mb-3">
+                <label for="marketing1">Anzahl Stunden Marketing</label>
+                <input class="form-control" type="number" name="marketing" id="marketing1" required>
+                <div class="invalid-feedback">Bitte Pflichtfeld ausfüllen</div>
+            </div>
+            <div class="mb-3">
+                <label for="entwicklung1">Anzahl Stunden Entwicklung</label>
+                <input class="form-control" type="number" name="entwicklung" id="entwicklung1" required>
+                <div class="invalid-feedback">Bitte Pflichtfeld ausfüllen</div>
+            </div>
         </div>
-        </div>
-    </div>
-    <div class="col-6">
-        <!-- Ändern?? -->
-        <label for="titel">Definiere den Titel / Bezeichnung deines Projektes</label>
-        <input class="form-control" type="text" name="titel" id="titel" required>
-        <div class="valid-feedback">Valid.</div>
-    </div>
-    <p>Wähle die Priorität aus</p>
-    <!-- Prio 1 -->
-    <div class="form-group">
-    <div class="form-check">
-        <input class="form-check-input" type="radio" name="prio" id="prio1" value="1 - hoch">
-        <label class="form-check-label" for="prio1"> 1 - hoch </label>
-    </div>
-    <!-- Prio 2 -->
-    <div class="form-check">
-        <input class="form-check-input" type="radio" name="prio" id="prio2" value="2 - mittel">
-        <label class="form-check-label" for="prio2"> 2 - mittel </label>
-    </div>
-    <!-- Prio 3 -->
-    <div class="form-check">
-        <input class="form-check-input" type="radio" name="prio" id="prio3" value="3 - tief">
-        <label class="form-check-label" for="prio3"> 3 - tief </label>
-    </div>
-    </div>
-    <br><br><h4>Terminplan</h4>
-    <div class="row col-6">
-        <div class="col-6">
-            <label for="startdatum1">Startdatum</label>
-            <input class="form-control" type="date" name="startdatum" id="startdatum1">
-            <div class="valid-feedback">Valid.</div>
-        </div>
-        <div class="col-6">
-            <label for="id_meilenstein1">Meilenstein 1</label>
-            <input class="form-control" type="date" name="meilenstein1" id="id_meilenstein1">
-            <div class="valid-feedback">Valid.</div>
-        </div>
-        <div class="col-6">
-            <label for="id_meilenstein2">Meilenstein 2</label>
-            <input class="form-control" type="date" name="meilenstein2" id="id_meilenstein2">
-            <div class="valid-feedback">Valid.</div>
-        </div>
-        <div class="col-6">
-            <label for="id_meilenstein3">Meilenstein 3</label>
-            <input class="form-control" type="date" name="meilenstein3" id="id_meilenstein3">
-            <div class="valid-feedback">Valid.</div>
-        </div>
-        <div class="col-6">
-            <label for="id_meilenstein4">Meilenstein 4</label>
-            <input class="form-control" type="date" name="meilenstein4" id="id_meilenstein4">
-            <div class="valid-feedback">Valid.</div>
-        </div>
-        <div class="col-6">
-            <label for="enddatum1">Enddatum</label>
-            <input class="form-control" type="date" name="enddatum" id="enddatum1">
-            <div class="valid-feedback">Valid.</div>
-        </div>
-    </div>
-    <br><br><h4>Finanzielles</h4>
-    <div class="row col-6">
-        <div class="col-6">
-            <label for="erstesQuartal1">Cash-Out 1. Quartal</label>
-            <input class="form-control" type="number" name="erstesQuartal" id="erstesQuartal1">
-            <div class="valid-feedback">Valid.</div>
-        </div>
-        <div class="col-6">
-            <label for="zweitesQuartal2">Cash-Out 2. Quartal</label>
-            <input class="form-control" type="number" name="zweitesQuartal" id="zweitesQuartal2">
-            <div class="valid-feedback">Valid.</div>
-        </div>
-        <div class="col-6">
-            <label for="drittesQuartal3">Cash-Out 3. Quartal</label>
-            <input class="form-control" type="number" name="drittesQuartal" id="drittesQuartal3">
-            <div class="valid-feedback">Valid.</div>
-        </div>
-        <div class="col-6">
-            <label for="viertesQuartal4">Cash-Out 4. Quartal</label>
-            <input class="form-control" type="number" name="viertesQuartal" id="viertesQuartal4">
-            <div class="valid-feedback">Valid.</div>
-        </div>
-    </div>
+        <br><br><button type="submit" class="btn btn-primary">Speichern</button><br><br>
+    </form>
 
-    <br><br><h4>Interner Aufwand</h4>
-    <p>Berechnet zu einem Stundensatz 55.50 CHF</p>
-    <div class="row col-6">
-        <div class="col-6">
-            <label for="informatik1">Anzahl Stunden Informatik</label>
-            <input class="form-control" type="number" name="informatik" id="informatik1">
-            <div class="valid-feedback">Valid.</div>
-        </div>
-        <div class="col-6">
-            <label for="buchhaltung1">Anzahl Stunden Buchhaltung</label>
-            <input class="form-control" type="number" name="buchhaltung" id="buchhaltung1">
-            <div class="valid-feedback">Valid.</div>
-        </div>
-        <div class="col-6">
-            <label for="marketing1">Anzahl Stunden Marketing</label>
-            <input class="form-control" type="number" name="marketing" id="marketing1">
-            <div class="valid-feedback">Valid.</div>
-        </div>
-        <div class="col-6">
-            <label for="entwicklung1">Anzahl Stunden Entwicklung</label>
-            <input class="form-control" type="number" name="entwicklung" id="entwicklung1">
-            <div class="valid-feedback">Valid.</div>
-        </div>
-    </div>
-    <br><br><button type="submit" class="btn btn-primary">Speichern</button><br><br>
-    </div>
-
-
-</form>
-
-
-<!-- Quelle Radio Buttons: https://mdbootstrap.com/docs/standard/forms/radio -->
+<!-- Quelle: https://www.w3schools.com/bootstrap5/bootstrap_form_validation.php -->
 {% endblock %}
+</div>
